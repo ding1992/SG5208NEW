@@ -1,6 +1,7 @@
-set JAVA_HOME=C:\Program Files (x86)\Java\jdk1.8.0_112
-set ANT_HOME=C:\Users\ding.guorui\Desktop\SG5208\SG5208\apache-ant-1.10.1
+set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+set ANT_HOME=C:\apache-ant-1.10.1
 set JUNIT_HOME=.\jars
 
 set PATH=%JAVA_HOME%\bin;%ANT_HOME%\bin
 set CLASSPATH=%JUNIT_HOME%\junit.jar
+set CLASSPATH=%JUNIT_HOME%\mysql-connector-java-5.1.41-bin.jar
