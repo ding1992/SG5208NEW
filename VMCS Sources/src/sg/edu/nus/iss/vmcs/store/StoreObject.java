@@ -7,6 +7,8 @@
  */
 package sg.edu.nus.iss.vmcs.store;
 
+import sg.edu.nus.iss.vmcs.system.Observable;
+
 /**
  * This entity object represents the generic object that is contained in a {@link StoreItem}.
  * 
@@ -24,7 +26,7 @@ package sg.edu.nus.iss.vmcs.store;
  * @author Olivo Miotto, Pang Ping Li
  */
 
-public class StoreObject {
+public class StoreObject extends Observable{
 	String name;
 
 	/**

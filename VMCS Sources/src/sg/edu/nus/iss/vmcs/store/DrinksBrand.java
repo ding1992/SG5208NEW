@@ -24,7 +24,7 @@ package sg.edu.nus.iss.vmcs.store;
  * @version 3.0 5/07/2003
  * @author Olivo Miotto, Pang Ping Li
  */
-public class DrinksBrand extends StoreObject {
+public class DrinksBrand extends StoreObject{
 	private int price;
 
 	/**
@@ -49,6 +49,8 @@ public class DrinksBrand extends StoreObject {
 	 */
 	public void setPrice(int p) {
 		price = p;
+		setChanged();
+		notifyObservers();
 	}
 
 	/**

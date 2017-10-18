@@ -173,7 +173,8 @@ public class TransactionController implements Observer {
 		System.out.println("TerminateFault: Begin");
 		dispenseCtrl.allowSelection(false);
 		coinReceiver.refundCash();
-		refreshMachineryDisplay();
+		//Removed due to Observer
+		//refreshMachineryDisplay();
 		System.out.println("TerminateFault: End");
 	}
 
@@ -195,7 +196,8 @@ public class TransactionController implements Observer {
 		if (custPanel != null) {
 			custPanel.setTerminateButtonActive(false);
 		}
-		refreshMachineryDisplay();
+		//Removed due to Observer
+		//refreshMachineryDisplay();
 		System.out.println("TerminateTransaction: End");
 	}
 
@@ -207,7 +209,8 @@ public class TransactionController implements Observer {
 		coinReceiver.stopReceive();
 		coinReceiver.refundCash();
 		dispenseCtrl.allowSelection(true);
-		refreshMachineryDisplay();
+		//Removed due to Observer
+		//refreshMachineryDisplay();
 		System.out.println("CancelTransaction: End");
 	}
 
@@ -363,6 +366,9 @@ public class TransactionController implements Observer {
 	}
 
 	public void update(Observable item, Object obj) {
-		refreshCustomerPanel();
+		dispenseCtrl.updateDrinkPanel();
+		if (!mainCtrl.getMachineryController().isDoorClosed())
+			terminateTransaction();
+		//changeGiver.displayChangeStatus();
 	}
 }// End of class TransactionController

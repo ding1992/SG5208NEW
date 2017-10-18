@@ -90,6 +90,7 @@ public class StoreController {
 			item.addObserver(this.mainCtrl.getMachineryController());
 			item.addObserver(this.mainCtrl.getMaintenanceController());
 			item.addObserver(this.mainCtrl.getTransactionController());
+			brand.addObserver(this.mainCtrl.getTransactionController());
 			dStore.addItem(i, item);
 		}
 	}
