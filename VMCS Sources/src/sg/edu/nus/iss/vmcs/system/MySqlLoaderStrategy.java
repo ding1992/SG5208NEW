@@ -1,14 +1,11 @@
 package sg.edu.nus.iss.vmcs.system;
 
-<<<<<<< HEAD
 import java.io.FileOutputStream;
 import java.io.IOException;
-=======
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
->>>>>>> 7b61a2b5782daa5002691eb233826206e26979ad
 import java.util.Properties;
 
 public class MySqlLoaderStrategy implements LoadPropertyStrategy {
@@ -30,12 +27,10 @@ public class MySqlLoaderStrategy implements LoadPropertyStrategy {
 		return prop;
 	}
 	
-<<<<<<< HEAD
 	@Override
 	public void saveProperties(String name, Properties prop) throws IOException {
 
 	}
-=======
     private void openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -50,7 +45,6 @@ public class MySqlLoaderStrategy implements LoadPropertyStrategy {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
->>>>>>> 7b61a2b5782daa5002691eb233826206e26979ad
 
     }
 }
